@@ -2,7 +2,10 @@ body {
     display: inline;
     background-color: rgb(42, 48, 52);
 }
-
+.class-name{
+    padding-top: 5%;
+    font-family: 'Courier New', monospace;
+}
 
 nav img {
 
@@ -123,8 +126,9 @@ nav .txt{
 
 
 .search{
+    /* padding-top: -20px; */
     padding: 2%;
-    margin: 10% 10% 1% 10%;
+    margin: 3% 10% 1% 10%;
     display: flex;
     /* justify-content: center; */
     border-radius: 40px;
