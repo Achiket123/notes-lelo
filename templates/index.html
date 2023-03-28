@@ -27,13 +27,17 @@
 
 
 
+{% for l in Class %}
+    
+
+<nav class="class-name">
+    {{l}} ({{quote[l]}})
+</nav>
 
 
 
 
-
-
-{% for sub_name in Class_11 %}
+{% for sub_name in Class[l] %}
 <div class="sub-list">
 
     <div class="navv">
@@ -49,13 +53,13 @@
                 alt="">
         </div>
 
-        {% for sub in Class_11[sub_name] %}
+        {% for sub in Class[l][sub_name] %}
         <div class="cards">
             <div class="txt" id="chname">
                <p id="chapter-name">{{sub}}</p>
             </div>
             <div class="card-actions">
-                <button class="download" onclick="location.href = '{{Class_11[sub_name][sub]}}'">Download</button>
+                <button class="download" onclick="location.href = '{{Class[l][sub_name][sub]}}'">Download</button>
             </div>
         </div>
         {% endfor %}
@@ -76,6 +80,6 @@
 
 {% endfor %}
 
-
+{% endfor %}
 
 {% endblock content %}
